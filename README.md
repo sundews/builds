@@ -41,7 +41,7 @@ end
 subgraph tm[TransparentMoq]
 end
 
-sd--runtime-->sb
+sb--runtime-->sd
 sg--runtime-->sb
 sg--runtime-->sc
 sq--runtime-->sb
