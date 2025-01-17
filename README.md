@@ -10,6 +10,7 @@
 | [CommandlineBatcher](https://github.com/sundews/CommandlineBatcher)                                     | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/CommandlineBatcher/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                   | ![Nuget](https://img.shields.io/nuget/v/CommandlineBatcher)                   | [GitHub Actions](https://github.com/sundews/CommandlineBatcher/actions)                   |
 | [Sundew.Generator](https://github.com/sundews/Sundew.Generator)                                         | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Generator/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                     | ![Nuget](https://img.shields.io/nuget/v/Sundew.Generator)                     | [GitHub Actions](https://github.com/sundews/Sundew.Generator/actions)                     |
 | [Sundew.Quantities](https://github.com/sundews/Sundew.Quantities)                                       | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Quantities/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                    | ![Nuget](https://img.shields.io/nuget/v/Sundew.Quantities)                    | [GitHub Actions](https://github.com/sundews/Sundew.Quantities/actions)                    |
+| [Sundew.Testing](https://github.com/sundews/Sundew.Testing)                                             | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Testing/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                       | ![Nuget](https://img.shields.io/nuget/v/Sundew.Testing)                       | [GitHub Actions](https://github.com/sundews/TransparentMoq/actions)                       |
 | [TransparentMoq](https://github.com/sundews/TransparentMoq)                                             | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/TransparentMoq/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                       | ![Nuget](https://img.shields.io/nuget/v/TransparentMoq)                       | [GitHub Actions](https://github.com/sundews/TransparentMoq/actions)                       |
 
 
@@ -17,36 +18,35 @@
 ```mermaid
 flowchart RL
 
-subgraph spp[Sundew.Packaging.Publish]
+subgraph spp [Sundew.Packaging.Publish]
 end
 
-subgraph sd[Sundew.DiscriminatedUnions]
+subgraph sd [Sundew.DiscriminatedUnions]
 end
 
-subgraph sb[Sundew.Base]
+subgraph sb [Sundew.Base]
 end
 
-subgraph sc[Sundew.CommandLine]
+subgraph sc [Sundew.CommandLine]
 end
 
-subgraph cb[CommandlineBatcher]
+subgraph cb [CommandlineBatcher]
 end
 
-subgraph sg[Sundew.Generator]
+subgraph sg [Sundew.Generator]
 end
 
-subgraph sq[Sundew.Quantities]
+subgraph sq [Sundew.Quantities]
 end
 
-subgraph tm[TransparentMoq]
+subgraph tm [TransparentMoq]
 end
 
-subgraph si[Sundew.Injection]
+subgraph si [Sundew.Injection]
 end
 
 sb--runtime-->sd
 sg--runtime-->sb
-sg--runtime-->sc
 sq--runtime-->sb
 spp--runtime-->sb
 cb--runtime-->sc--runtime-->sb
@@ -54,8 +54,9 @@ cb--runtime-->sc--runtime-->sb
 sq-.development.->sg
 si-.development.->spp
 sd-.development.->spp
+sd-.development.->sb
 sb-.development.->spp
-sc<--runtime---spp
+sc--runtime---spp
 sc-.development.->spp
 cb-.development.->spp
 sg-.development.->spp
