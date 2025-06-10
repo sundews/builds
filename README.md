@@ -10,7 +10,8 @@
 | [CommandlineBatcher](https://github.com/sundews/CommandlineBatcher)                                     | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/CommandlineBatcher/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                   | ![Nuget](https://img.shields.io/nuget/v/CommandlineBatcher)                   | [GitHub Actions](https://github.com/sundews/CommandlineBatcher/actions)                   |
 | [Sundew.Generator](https://github.com/sundews/Sundew.Generator)                                         | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Generator/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                     | ![Nuget](https://img.shields.io/nuget/v/Sundew.Generator)                     | [GitHub Actions](https://github.com/sundews/Sundew.Generator/actions)                     |
 | [Sundew.Quantities](https://github.com/sundews/Sundew.Quantities)                                       | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Quantities/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                    | ![Nuget](https://img.shields.io/nuget/v/Sundew.Quantities)                    | [GitHub Actions](https://github.com/sundews/Sundew.Quantities/actions)                    |
-| [Sundew.Testing](https://github.com/sundews/Sundew.Testing)                                             | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Testing/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                       | ![Nuget](https://img.shields.io/nuget/v/Sundew.Testing)                       | [GitHub Actions](https://github.com/sundews/TransparentMoq/actions)                       |
+| [Sundew.Testing](https://github.com/sundews/Sundew.Testing)                                             | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Testing/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                       | ![Nuget](https://img.shields.io/nuget/v/Sundew.Testing)                       | [GitHub Actions](https://github.com/sundews/Sundew.Testing/actions)                       |
+| [TransparentMoq](https://github.com/sundews/Sundew.Reactive)                                             | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/Sundew.Reactive/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                       | ![Nuget](https://img.shields.io/nuget/v/Sundew.Reactive)                       | [GitHub Actions](https://github.com/sundews/Sundew.Reactive/actions)                       |
 | [TransparentMoq](https://github.com/sundews/TransparentMoq)                                             | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/sundews/TransparentMoq/.github/workflows/dotnet.yml?branch=main&label=GitHub%20Actions&logo=github)                       | ![Nuget](https://img.shields.io/nuget/v/TransparentMoq)                       | [GitHub Actions](https://github.com/sundews/TransparentMoq/actions)                       |
 
 
@@ -45,10 +46,14 @@ end
 subgraph si [Sundew.Injection]
 end
 
+subgraph sr [Sundew.Reactive]
+end
+
 sb--runtime-->sd
 sg--runtime-->sb
 sq--runtime-->sb
 spp--runtime-->sb
+sr--runtime-->sb
 cb--runtime-->sc--runtime-->sb
 
 sq-.development.->sg
